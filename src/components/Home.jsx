@@ -1,105 +1,102 @@
 import { Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { Code, Brain, Rocket, Settings, GraduationCap } from "lucide-react";
-
-import { SiGithub } from "react-icons/si";
-import { SiLinkedin } from "react-icons/si";
-
-
-
+import { SiGithub, SiLinkedin } from "react-icons/si";
 
 export default function Home() {
   return (
     <section id="home" className="bg-white text-gray-800">
-
       {/* Hero Section */}
       <div className="flex flex-col-reverse md:flex-row items-center justify-between px-6 py-16 max-w-6xl mx-auto">
-
         {/* Left Content */}
-      
+        <motion.div
+          className="md:w-1/2 text-left mt-10 md:mt-0 space-y-6"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h1 className="text-4xl font-bold text-gray-900">
+            Hey there, I'm <span className="text-purple-600">Shrinedhi M R</span>
+          </h1>
 
-      <motion.div
-  className="md:w-1/2 text-left mt-10 md:mt-0 space-y-6"
-  initial={{ opacity: 0, x: -50 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 1 }}
->
-  <h1 className="text-4xl font-bold text-gray-900">
-    Hey there, I'm <span className="text-purple-600">Shrinedhi M R</span>
-  </h1>
+          <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
+            <div className="flex items-start gap-3">
+              <Code className="text-purple-600 mt-1 w-6 h-6" />
+              <p>
+                A passionate <strong>Software Developer</strong> who loves building intuitive UIs with React and Tailwind CSS.
+              </p>
+            </div>
 
-  <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
-    <div className="flex items-start gap-3">
-      <Code className="text-purple-600 mt-1 w-6 h-6" />
-      <p>
-        A passionate <strong>Software Developer</strong> who loves building intuitive UIs with React and Tailwind CSS.
-      </p>
-    </div>
+            <div className="flex items-start gap-3">
+              <Brain className="text-purple-600 mt-1 w-6 h-6" />
+              <p>
+                Solving problems is my thing – I've tackled over <strong>250+ coding challenges</strong> on LeetCode & GFG!
+              </p>
+            </div>
 
-    <div className="flex items-start gap-3">
-      <Brain className="text-purple-600 mt-1 w-6 h-6" />
-      <p>
-        Solving problems is my thing – I've tackled over <strong>250+ coding challenges</strong> on LeetCode & GFG!
-      </p>
-    </div>
+            <div className="flex items-start gap-3">
+              <Rocket className="text-purple-600 mt-1 w-6 h-6" />
+              <p>
+                Interned at <strong>Infosys Springboard</strong> & contributed to open-source through <strong>GSSoC 2024</strong>.
+              </p>
+            </div>
 
-    <div className="flex items-start gap-3">
-      <Rocket className="text-purple-600 mt-1 w-6 h-6" />
-      <p>
-        Interned at <strong>Infosys Springboard</strong> & contributed to open-source through <strong>GSSoC 2024</strong>.
-      </p>
-    </div>
+            <div className="flex items-start gap-3">
+              <Settings className="text-purple-600 mt-1 w-6 h-6" />
+              <p>
+                Skilled in <strong>Python Automation</strong>, MERN stack, and beginner DevOps tools like Docker & GitHub Actions.
+              </p>
+            </div>
 
-    <div className="flex items-start gap-3">
-      <Settings className="text-purple-600 mt-1 w-6 h-6" />
-      <p>
-        Skilled in <strong>Python Automation</strong>, MERN stack, and beginner DevOps tools like Docker & GitHub Actions.
-      </p>
-    </div>
+            <div className="flex items-start gap-3">
+              <GraduationCap className="text-purple-600 mt-1 w-6 h-6" />
+              <p>
+                <strong>B.Tech IT student (2021–2025)</strong>, open to internships and full-time roles!
+              </p>
+            </div>
+          </div>
 
-    <div className="flex items-start gap-3">
-      <GraduationCap className="text-purple-600 mt-1 w-6 h-6" />
-      <p>
-         <strong>B.Tech IT student (2021–2025)</strong>, open to internships and full-time roles!
-      </p>
-    </div>
-  </div>
+          <div className="relative mt-8 max-w-2xl mx-auto bg-purple-50 border-l-4 border-purple-500 p-6 rounded-xl shadow">
+            <p className="text-sm italic text-purple-800 font-medium leading-relaxed text-center">
+              “A good interface is like a warm welcome. I build experiences that feel as good as they function.”
+            </p>
+            <span className="absolute -top-3 left-4 text-purple-400 text-3xl font-serif">“</span>
+          </div>
 
-
-<div className="relative mt-8 max-w-2xl mx-auto bg-purple-50 border-l-4 border-purple-500 p-6 rounded-xl shadow">
-  <p className="text-sm italic text-purple-800 font-medium leading-relaxed text-center">
-    “A good interface is like a warm welcome. I build experiences that feel as good as they function.”
-  </p>
-  <span className="absolute -top-3 left-4 text-purple-400 text-3xl font-serif">“</span>
-</div>
-
-
-
-
-</motion.div>
-
-
+          {/* Resume Buttons */}
+          <div className="mt-8 flex justify-center gap-4">
+            <a
+              href="/resume.pdf"
+              download
+              className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-2 rounded shadow transition"
+            >
+              Download Resume
+            </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold px-6 py-2 rounded shadow transition"
+            >
+              View Resume
+            </a>
+          </div>
+        </motion.div>
 
         {/* Right Content – Image */}
-<motion.div
-  className="md:w-1/2 flex justify-center md:justify-end"
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1, delay: 0.5 }}
->
-  
-  <motion.img
-  src="/images/girl-code.jpg"
-  alt="Reading illustration"
-  className="w-[384px] md:w-[420px] h-auto rounded-lg shadow-lg object-cover hover:scale-105 transition-transform duration-300"
-  whileHover={{ scale: 1.05 }}
-/>
-
-
-</motion.div>
-
-
-
+        <motion.div
+          className="md:w-1/2 flex justify-center md:justify-end"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <motion.img
+            src="/images/girl-code.jpg"
+            alt="Reading illustration"
+            className="w-[384px] md:w-[420px] h-auto rounded-lg shadow-lg object-cover hover:scale-105 transition-transform duration-300"
+            whileHover={{ scale: 1.05 }}
+          />
+        </motion.div>
       </div>
 
       {/* Divider */}
@@ -128,7 +125,6 @@ export default function Home() {
             className="bg-white text-black w-12 h-12 flex items-center justify-center rounded-full shadow-md hover:bg-purple-100 transition"
           >
             <SiGithub className="w-6 h-6" />
-
           </a>
 
           {/* LinkedIn */}
@@ -139,7 +135,6 @@ export default function Home() {
             className="bg-white text-blue-700 w-12 h-12 flex items-center justify-center rounded-full shadow-md hover:bg-purple-100 transition"
           >
             <SiLinkedin className="w-6 h-6" />
-
           </a>
 
           {/* Email */}

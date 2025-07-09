@@ -48,12 +48,7 @@ export default function Navbar() {
           <FolderGit2 className="w-5 h-5" /> Projects
         </Link>
 
-        <Link
-          to="/resume"
-          className="flex items-center gap-2 hover:text-purple-400 transition-colors duration-200"
-        >
-          <FileText className="w-5 h-5" /> Resume
-        </Link>
+        
       </div>
 
       {/* Mobile Menu Button */}
@@ -100,13 +95,7 @@ export default function Navbar() {
             <FolderGit2 className="w-5 h-5" /> Projects
           </Link>
 
-          <Link
-            to="/resume"
-            onClick={() => setIsOpen(false)}
-            className="flex items-center gap-2 hover:text-purple-400"
-          >
-            <FileText className="w-5 h-5" /> Resume
-          </Link>
+          
         </div>
       )}
     </nav>
