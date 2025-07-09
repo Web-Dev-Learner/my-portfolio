@@ -27,3 +27,6 @@ dist-ssr
 
 # Don't track personal resume
 /public/resume.pdf
+
+/public/desktop.ini
+

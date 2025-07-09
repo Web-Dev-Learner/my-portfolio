@@ -1,48 +1,115 @@
 import { Code, Wrench, Layers } from "lucide-react";
 import GitHubCalendar from "react-github-calendar";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
     <section id="about" className="bg-white text-black px-6 py-12">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6 text-center text-purple-600">
-          About Me
-        </h2>
+        
+        <motion.h2
+  className="text-3xl font-bold mb-6 text-center text-purple-600"
+  initial={{ opacity: 0, y: -30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+>
+  About Me
+</motion.h2>
+<motion.div
+  className="mb-6 border-l-4 border-purple-300 bg-purple-50/40 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.2, duration: 0.6 }}
+>
+  <p className="text-gray-800 text-base sm:text-lg leading-relaxed">
+    I’m <strong className="text-black">Shrinedhi M R</strong> — someone who didn’t just stumble into tech but grew with it. My curiosity began with simple HTML pages, and soon enough, I was diving deep into React, Python automation, and building things that actually made people’s lives easier.
+  </p>
+</motion.div>
 
-        <p className="mb-4 text-gray-800">
-          I'm <strong className="text-black">Shrinedhi M.R.</strong> (She/Her), a Software Developer with a passion for clean UI/UX, efficient full-stack development, and automation with Python.
-          I’ve contributed to open source via <strong className="text-black">GirlScript Summer of Code 2024 - Extended</strong> and completed internships at <strong className="text-black">Infosys Springboard</strong> and <strong className="text-black">Microsoft AICTE</strong>.
-        </p>
+<motion.div
+  className="mb-6 border-l-4 border-purple-300 bg-purple-50/40 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.4, duration: 0.6 }}
+>
+  <p className="text-gray-800 text-base sm:text-lg leading-relaxed">
+    What excites me most isn’t just clean code it’s watching an idea come to life, pixel by pixel, line by line. Whether it's debugging a stubborn bug or perfecting a UI animation, I enjoy the thrill of solving and building.
+  </p>
+</motion.div>
 
-        <p className="mb-1 text-purple-600">
-          💡 <strong>What I Do:</strong>
-        </p>
-        <ul className="list-disc ml-6 mt-2 space-y-1 text-gray-800">
-          <li>Develop responsive UIs using React, Tailwind CSS, Zustand, and JavaScript</li>
-          <li>Build scalable APIs using Node.js, Express, and MongoDB Atlas</li>
-          <li>Automate tasks and data pipelines using Python</li>
-          <li>Solve coding challenges – 250+ problems on LeetCode and GFG</li>
-          <li>Explore DevOps with GitHub Actions, Docker, and CI/CD pipelines</li>
-        </ul>
+<motion.div
+  className="mb-6 border-l-4 border-purple-300 bg-purple-50/40 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.5, duration: 0.6 }}
+>
+  <p className="text-gray-800 text-base sm:text-lg leading-relaxed">
+    I'm also a strong believer in community and collaboration. From open-source contributions to internships at Infosys Springboard and Microsoft AICTE, every step has helped me grow both as a developer and a teammate.
+  </p>
+</motion.div>
 
-        {/* Education */}
-        <div className="mt-10">
-          <h3 className="text-2xl font-semibold mb-4 text-purple-600">Education</h3>
-          <div className="space-y-4">
-            <div className="border-l-4 border-purple-500 pl-4">
-              <h4 className="text-lg font-semibold text-black">Meenakshi College Of Engineering</h4>
-              <p className="text-sm text-gray-700">B.Tech in Information Technology (2021 – 2025) – Chennai, India</p>
-              <p className="text-sm text-gray-600">CGPA: 8.9 / 10</p>
-            </div>
-            <div className="border-l-4 border-purple-500 pl-4">
-              <h4 className="text-lg font-semibold text-black">All Angels Matriculation Higher Secondary School</h4>
-              <p className="text-sm text-gray-700">Bio-Maths (2019 – 2021) – Chennai, India</p>
-              <p className="text-sm text-gray-600">Percentage: 86.87%</p>
+<motion.div
+  className="mb-6 border-l-4 border-purple-300 bg-purple-50/40 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.6, duration: 0.6 }}
+>
+  <p className="text-gray-800 text-base sm:text-lg leading-relaxed">
+    My learning mantra? <span className="italic text-purple-600">“Stay curious, build daily, and help others grow.”</span> That’s how I approach not just code, but life.
+  </p>
+</motion.div>
+
+
+{/* What Drives Me */}
+<motion.div
+  className="mt-6"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.8, duration: 0.7 }}
+>
+  <p className="mb-1 text-purple-600 font-medium text-lg">🚀 What Drives Me:</p>
+  <ul className="list-disc ml-6 mt-2 space-y-1 text-gray-800 text-base">
+    <li>I thrive on turning ideas into products that are both beautiful and practical.</li>
+    <li>Collaboration fuels me  I love sharing, learning, and growing with others.</li>
+    <li>Efficiency is my obsession  I enjoy automating, optimizing, and simplifying.</li>
+    <li>I love the process  because every bug, brainstorm, and breakthrough makes me better.</li>
+  </ul>
+</motion.div>
+
+
+
+        {/* Education  */}
+        <motion.div
+          className="mt-10 flex flex-col md:flex-row md:items-start md:gap-6"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
+          <div className="flex-1">
+            <h3 className="text-2xl font-semibold mb-4 text-purple-600">Education</h3>
+            <div className="space-y-4">
+              <div className="border-l-4 border-purple-500 pl-4">
+                <h4 className="text-lg font-semibold text-black">Meenakshi College Of Engineering</h4>
+                <p className="text-sm text-gray-700">B.Tech in Information Technology (2021 – 2025) – Chennai, India</p>
+                <p className="text-sm text-gray-600">CGPA: 9.1 / 10</p>
+              </div>
+              <div className="border-l-4 border-purple-500 pl-4">
+                <h4 className="text-lg font-semibold text-black">All Angels Matriculation Higher Secondary School</h4>
+                <p className="text-sm text-gray-700">Bio-Maths (2019 – 2021) – Chennai, India</p>
+                <p className="text-sm text-gray-600">Percentage: 86.87%</p>
+              </div>
             </div>
           </div>
-        </div>
+          <motion.img
+            src="/images/girl-code3.png"
+            alt="Girl Learning"
+            className="w-72 mt-12 md:mt-0 rounded-lg shadow-lg mx-auto"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          />
+        </motion.div>
 
-        {/* Skills Sections */}
+        {/* Skills */}
         <div className="mt-10">
           <SkillSection icon={<Code className="w-6 h-6 mr-2 text-purple-600" />} title="Languages">
             <TechRow items={[
@@ -56,7 +123,7 @@ export default function About() {
           <SkillSection icon={<Layers className="w-6 h-6 mr-2 text-purple-600" />} title="Frameworks & Libraries">
             <TechRow items={[
               ["React", "react/react-original"],
-              ["Tailwind CSS", "tailwind-css/tailwind-css-plain"],
+              ["Tailwind CSS", "/images/tailwind.png"],
               ["Express", "express/express-original"],
               ["Django", "django/django-plain"],
               ["Node.js", "nodejs/nodejs-original"]
@@ -90,34 +157,45 @@ export default function About() {
           <SkillSection icon={<Wrench className="w-6 h-6 mr-2 text-purple-600" />} title="DevOps & Deployment">
             <TechRow items={[
               ["Docker", "docker/docker-original"],
-              ["CI/CD", "gitlab/gitlab-original"],
-              ["Azure", "azure/azure-original"]
+              ["CI/CD", "gitlab/gitlab-original"]
             ]} />
           </SkillSection>
         </div>
 
         {/* Competitive Coding */}
-        <h3 className="text-2xl font-semibold mb-6 text-purple-600 mt-10">Competitive Coding</h3>
-        <div className="flex flex-col items-center gap-6">
-          <a href="https://leetcode.com/Shrinedhi/" target="_blank" rel="noopener noreferrer">
-            <img
-              src="https://leetcard.jacoblin.cool/Shrinedhi?theme=light&font=Karma&ext=heatmap"
-              alt="LeetCode Stats"
-              className="w-[360px] sm:w-[420px]"
-            />
-          </a>
-          <a
-            href="https://www.geeksforgeeks.org/user/shrinedhi_m_r/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium px-5 py-2 rounded shadow"
-          >
-            View My GeeksforGeeks Profile
-          </a>
-        </div>
+        <motion.div
+          className="mt-12"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h3 className="text-2xl font-semibold mb-6 text-purple-600">Competitive Coding</h3>
+          <div className="flex flex-col items-center gap-6">
+            <a href="https://leetcode.com/Shrinedhi/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="https://leetcard.jacoblin.cool/Shrinedhi?theme=light&font=Karma&ext=heatmap"
+                alt="LeetCode Stats"
+                className="w-[360px] sm:w-[420px]"
+              />
+            </a>
+            <a
+              href="https://www.geeksforgeeks.org/user/shrinedhi_m_r/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium px-5 py-2 rounded shadow"
+            >
+              View My GeeksforGeeks Profile
+            </a>
+          </div>
+        </motion.div>
 
         {/* GitHub Calendar */}
-        <div className="mt-12 text-center">
+        <motion.div
+          className="mt-12 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
           <h3 className="text-2xl font-semibold mb-4 text-purple-600">Days I Code</h3>
           <div className="flex justify-center">
             <GitHubCalendar
@@ -131,7 +209,7 @@ export default function About() {
               }}
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -149,7 +227,6 @@ function SkillSection({ icon, title, children }) {
   );
 }
 
-
 // Tech stack display
 function TechRow({ items }) {
   return (
@@ -158,7 +235,7 @@ function TechRow({ items }) {
         <TechIcon
           key={name}
           name={name}
-          src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${path}.svg`}
+          src={path.startsWith("/") ? path : `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${path}.svg`}
         />
       ))}
     </div>
@@ -168,9 +245,12 @@ function TechRow({ items }) {
 // Tech icon card
 function TechIcon({ name, src }) {
   return (
-    <div className="flex flex-col items-center w-24 h-24 bg-white text-black shadow rounded-lg p-2">
+    <motion.div
+      className="flex flex-col items-center w-24 h-24 bg-white text-black shadow rounded-lg p-2"
+      whileHover={{ scale: 1.05 }}
+    >
       <img src={src} alt={name} className="w-10 h-10 object-contain" />
       <span className="text-xs mt-2 font-medium text-center">{name}</span>
-    </div>
+    </motion.div>
   );
 }

@@ -1,24 +1,22 @@
-// components/Footer.jsx
+
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className="bg-black text-white py-5 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
-        {/* Left */}
+       
         <div className="mb-2 md:mb-0">
-          Designed & Developed by <span className="font-semibold text-purple-400">Shrinedhi M.R</span>
+          Designed & Developed by <span className="font-semibold text-purple-400">Shrinedhi M R</span>
         </div>
 
-        {/* Center */}
         <div className="mb-2 md:mb-0 text-center">
           © {new Date().getFullYear()} All rights reserved
         </div>
 
-        {/* Right - Social Icons */}
         <div className="flex space-x-4">
           <a
-            href="https://github.com/Web-Dev-Learner"
+            href="https://github.com/Web-Dev-Learner?tab=overview&from=2025-07-01&to=2025-07-09"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-purple-400 transition-colors duration-200"

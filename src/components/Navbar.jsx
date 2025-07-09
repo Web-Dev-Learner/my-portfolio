@@ -1,4 +1,4 @@
-// components/Navbar.jsx
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Home,
@@ -6,16 +6,20 @@ import {
   Briefcase,
   FolderGit2,
   FileText,
+  Menu,
+  X,
 } from "lucide-react";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="bg-black text-white px-6 py-4 flex justify-between items-center fixed top-0 left-0 w-full z-50 shadow-md">
       {/* Brand Name */}
       <h1 className="text-2xl font-bold text-purple-500">Shrinedhi M R</h1>
 
-      {/* Navigation Links */}
-      <div className="space-x-6 text-lg font-medium flex items-center">
+      {/* Desktop Navigation Links */}
+      <div className="hidden md:flex space-x-6 text-lg font-medium items-center">
         <Link
           to="/"
           className="flex items-center gap-2 hover:text-purple-400 transition-colors duration-200"
@@ -51,6 +55,60 @@ export default function Navbar() {
           <FileText className="w-5 h-5" /> Resume
         </Link>
       </div>
+
+      {/* Mobile Menu Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="md:hidden focus:outline-none"
+        aria-label="Toggle navigation"
+      >
+        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+      </button>
+
+      {/* Mobile Menu Links */}
+      {isOpen && (
+        <div className="absolute top-16 left-0 w-full bg-black text-white flex flex-col items-center space-y-4 py-4 md:hidden z-40 shadow-lg">
+          <Link
+            to="/"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-2 hover:text-purple-400"
+          >
+            <Home className="w-5 h-5" /> Home
+          </Link>
+
+          <Link
+            to="/about"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-2 hover:text-purple-400"
+          >
+            <User className="w-5 h-5" /> About
+          </Link>
+
+          <Link
+            to="/experience"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-2 hover:text-purple-400"
+          >
+            <Briefcase className="w-5 h-5" /> Experience
+          </Link>
+
+          <Link
+            to="/projects"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-2 hover:text-purple-400"
+          >
+            <FolderGit2 className="w-5 h-5" /> Projects
+          </Link>
+
+          <Link
+            to="/resume"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-2 hover:text-purple-400"
+          >
+            <FileText className="w-5 h-5" /> Resume
+          </Link>
+        </div>
+      )}
     </nav>
   );
 }
