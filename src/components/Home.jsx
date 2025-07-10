@@ -63,24 +63,7 @@ export default function Home() {
             <span className="absolute -top-3 left-4 text-purple-400 text-3xl font-serif">“</span>
           </div>
 
-          {/* Resume Buttons */}
-          <div className="mt-8 flex justify-center gap-4">
-            <a
-              href="/resume.pdf"
-              download
-              className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-2 rounded shadow transition"
-            >
-              Download Resume
-            </a>
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold px-6 py-2 rounded shadow transition"
-            >
-              View Resume
-            </a>
-          </div>
+          
         </motion.div>
 
         {/* Right Content – Image */}
