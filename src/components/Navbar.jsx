@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaCodeBranch, FaStar } from "react-icons/fa"; // ✅ only once
+
 import {
   Home,
   User,
@@ -48,8 +50,28 @@ export default function Navbar() {
           <FolderGit2 className="w-5 h-5" /> Projects
         </Link>
 
+
+
+<a
+  href="https://github.com/Web-Dev-Learner/my-portfolio"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex space-x-2 bg-purple-800 text-white px-4 py-2 rounded-lg items-center shadow hover:bg-purple-700 transition"
+  title="View GitHub Repo"
+>
+  <FaCodeBranch className="w-4 h-4" />
+  <FaStar className="w-4 h-4" />
+</a>
+
+
+
         
       </div>
+
+
+
+
+
 
       {/* Mobile Menu Button */}
       <button
@@ -94,6 +116,18 @@ export default function Navbar() {
           >
             <FolderGit2 className="w-5 h-5" /> Projects
           </Link>
+
+
+<a
+  href="https://github.com/Web-Dev-Learner/my-portfolio"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex space-x-2 bg-purple-800 text-white px-4 py-2 rounded-lg items-center shadow hover:bg-purple-700 transition"
+  title="View GitHub Repo"
+>
+  <FaCodeBranch className="w-4 h-4" />
+  <FaStar className="w-4 h-4" />
+</a>
 
           
         </div>
