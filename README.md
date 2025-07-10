@@ -9,7 +9,7 @@
 <h2>🚀 Live Demo</h2>
 
 <p>
-  👉 <a href="https://your-portfolio-link.vercel.app/" target="_blank">Click here to view my portfolio</a><br>
+  👉 <a href="https://my-portfolio-two-lemon-51.vercel.app/">Click here to view my portfolio</a><br>
   <i></i>
 </p>
 
